@@ -1,0 +1,206 @@
+/* CSS Reset */
+/* Every browser has its own default user agent stylesheet, that it uses to make unstyled websites appear more legible. Eg. Submit buttons look different in every browser
+Using a CSS Reset, CSS authors can force every browser to have all its styles reset to null, thus avoiding cross browser differences as much as possible. */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*CSS variables*/
+:root {
+  --navbar-height: 59px;
+}
+/*Navigation Bar*/
+#navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+/*Navigation Bar: Logo and Image*/
+#logo {
+  margin: 8px 8px;
+  padding: 8px 8px;
+}
+#logo img {
+  height: 100px;
+  width: 100px;
+}
+/*Navigation Bar: List style*/
+#navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar ul li {
+  font-weight: bold;
+  font-family: "Permanent Marker", cursive;
+  list-style: none;
+}
+#navbar ul li a {
+  display: block;
+  margin: 8px 8px;
+  padding: 8px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+#navbar ul li a:hover {
+  background-color: white;
+  color: black;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  height: 530px;
+}
+#home::before {
+  content: "";
+  background: url("bg2.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%; /*we'll reduce its height as well*/
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89;
+}
+#home h1 {
+  color: white;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+}
+#home p {
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+/*Services section*/
+#services {
+  margin: 34px;
+  display: flex;
+}
+#services .box {
+  border: 2px solid green;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  background-color: rgb(152, 219, 152);
+}
+#services .box img {
+  height: 160px;
+  display: block;
+  margin: auto; /*will ork if display is block*/
+}
+/*Utilities are simple HTML classes typically scoped to a single CSS property, like border-style or background-color*/
+.hprimary {
+  font-size: 2.8rem;
+  padding: 12px;
+  font-family: "Permanent Marker", cursive;
+}
+.hsecondary {
+  padding: 12px;
+  font-size: 1.8rem;
+  font-family: "Permanent Marker", cursive;
+}
+.btn {
+  padding: 10px 10px;
+  margin: 20px;
+  color: white;
+  border: 2px solid white;
+  background-color: green;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+}
+.center {
+  text-align: center;
+}
+#clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#clients img {
+  height: 100px;
+  margin: 40px;
+}
+#client-section {
+  /* border: 2px solid red; */
+  height: 250px;
+  /* position: relative; */
+}
+#client-section::before {
+  content: "";
+  background: url("bg1.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  z-index: -1;
+  opacity: 0.3;
+}
+#contact {
+  /* position: relative; */
+  margin-top: 15px;
+  /* border: 2px solid red; */
+  height: 500px;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  background: url("contact.jpg") no-repeat center center/cover;
+  z-index: -1;
+  width: 100%;
+  height: 500px;
+  opacity: 0.5;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+body {
+  background-color: #f0dfd3;
+}
+.contact-box {
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 20px;
+}
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 9px;
+}
+.contact-box form {
+  width: 30%;
+  height: 50px;
+}
+.contact-box label {
+  font-size: 15px;
+  font-family: "Permanent Marker", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
